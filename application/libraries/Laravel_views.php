@@ -238,4 +238,22 @@ class Laravel_views {
 	{
 		return $this->environment;
 	}
+
+	/**
+	 * Call
+	 *
+	 * Magic Method
+	 *
+	 */
+	public function __call($method,$parameters)
+	{
+		if (method_exists($this->environment,$method))
+		{
+			return call_user_func_array(array($this->environment, $method), $parameters);
+		}
+		else
+		{
+			show_error('Undefined method: '.$method);
+		}
+	}
 }
