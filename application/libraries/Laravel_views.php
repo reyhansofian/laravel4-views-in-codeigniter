@@ -141,7 +141,7 @@ class Laravel_views {
 	 */
 	private function _set_view_paths()
 	{
-		$additional_paths = $this->CI->config->item('additional_view_paths');
+		$additional_paths = $this->CI->config->item('additional_view_paths','laravel_views');
 		$this->view_paths[] = VIEWPATH;
 
 		if (count($additional_paths)>0)
