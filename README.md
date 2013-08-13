@@ -33,6 +33,11 @@ Make sure your composer.json file contains
 "illuminate/view": "v4.0.6"
 ```
 
+Update Composer
+```code
+composer update
+```
+
 Download this repository and add the files to your CodeIgniter installation.
 
 **Beware** that if you have an existing "MY_Controller" class you will need to add the following method to it:
